@@ -1,9 +1,9 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'javarmi-production.up.railway.app/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'javarmi-production.up.railway.app';
 
 export const calculatorService = {
     async calculate(operand1, operand2, operation) {
         try {
-            const response = await fetch(`${API_BASE_URL}/calculator/calculate`, {
+            const response = await fetch(`${API_BASE_URL}/api/calculator/calculate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const calculatorService = {
 
     async getHistory() {
         try {
-            const response = await fetch(`${API_BASE_URL}/calculator/history`, {
+            const response = await fetch(`${API_BASE_URL}/api/calculator/history`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export const calculatorService = {
 
     async checkHealth() {
         try {
-            const response = await fetch(`${API_BASE_URL}/calculator/health`, {
+            const response = await fetch(`${API_BASE_URL}/api/calculator/health`, {
                 method: 'GET',
             });
 

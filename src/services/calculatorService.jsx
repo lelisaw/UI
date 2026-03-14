@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'javarmi-production.up.railway.app/api';
 
 export const calculatorService = {
     async calculate(operand1, operand2, operation) {

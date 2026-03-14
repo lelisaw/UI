@@ -30,7 +30,7 @@ export const calculatorService = {
 
     async getHistory() {
         try {
-            const response = await fetch(`${API_BASE_URL}/api/calculator/history`, {
+            const response = await fetch(`https://javarmi-production.up.railway.app/api/calculator/history`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export const calculatorService = {
 
     async checkHealth() {
         try {
-            const response = await fetch(`${API_BASE_URL}/api/calculator/health`, {
+            const response = await fetch(`https://javarmi-production.up.railway.app/api/calculator/health`, {
                 method: 'GET',
             });
 

@@ -3,7 +3,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || 'javarmi-production.up.rail
 export const calculatorService = {
     async calculate(operand1, operand2, operation) {
         try {
-            const response = await fetch(`${API_BASE_URL}/api/calculator/calculate`, {
+            const response = await fetch(`https://javarmi-production.up.railway.app/api/calculator/calculate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
